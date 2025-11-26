@@ -1,121 +1,242 @@
-Desafio Técnico SRE
-Esta etapa visa avaliar as competências técnicas dos(as) candidatos(as) para a vaga de Site Reliability Engineer (SRE).
+📘 Desafio Técnico — SRE/DEVOPS
 
-Objetivos da Avaliação
-O teste tem como foco a avaliação das seguintes habilidades e conhecimentos:
+Avaliação técnica para a vaga de Site Reliability Engineer (SRE).
 
-Infraestrutura como Código (IaC): Capacidade de provisionar e gerenciar recursos de infraestrutura de forma automatizada.
+🎯 Objetivo da Avaliação
 
-Contêineres e Orquestração (Kubernetes/Docker): Proficiência na criação, distribuição e gerenciamento de aplicações conteinerizadas.
+Este desafio tem como finalidade avaliar:
 
-Arquitetura Cloud e Redes: Conhecimento em provedores de nuvem (AWS/Azure/GCP) e configuração de ambientes de rede (VPC, subnets, segurança).
+Habilidades Técnicas
 
-Práticas de DevOps e Boas Práticas de Código: Demonstração de soluções bem estruturadas, seguras, com alta disponibilidade e documentação clara.
+Infraestrutura como Código (IaC): Provisionamento e gerenciamento automatizado de recursos.
 
-Observabilidade: Implementação de mecanismos de monitoramento e rastreabilidade para garantir a saúde e o desempenho da aplicação.
+Contêineres e Orquestração: Docker e Kubernetes (criação, deploy, distribuição e manutenção).
 
-Descrição do Desafio
-A Domo (Banco Mercantil) está em processo de migração de sua infraestrutura local (On-Premises) para a Cloud Pública. O desafio consiste em modernizar uma aplicação monolítica existente, segmentando-a em microsserviços e provisionando a infraestrutura necessária para suportar a nova arquitetura. A implementação deve contemplar os benefícios da computação distribuída, como escalabilidade, elasticidade, redução de custos e segurança.
+Arquitetura Cloud e Redes: GCP (adaptar termos originalmente descritos em AWS), VPC, subnets, segurança.
 
-O desafio está dividido em três componentes principais:
+DevOps & Boas Práticas: Código limpo, seguro, resiliente, com alta disponibilidade.
 
-Infraestrutura
+Observabilidade: Monitoramento, métricas, logs, rastreamento e saúde da aplicação.
+
+📝 Descrição Geral do Desafio
+
+A empresa Domo (Banco Mercantil) está migrando sua infraestrutura on-premise para GCP.
+O desafio consiste em modernizar uma aplicação monolítica, quebrando-a em microsserviços (Front-end, Back-end e Banco de Dados), e provisionar toda a infraestrutura na nuvem usando boas práticas de Engenharia de Confiabilidade.
+
+O sucesso da entrega depende de:
+
+Qualidade técnica do código,
+
+Arquitetura,
+
+Segurança,
+
+Alta disponibilidade,
+
+Observabilidade,
+
+Clareza da documentação.
+
+📦 Componentes Principais
+
+O desafio está dividido em 3 partes:
+
+Infraestrutura (IaC)
 
 Back-end
 
 Front-end
 
-O sucesso da entrega será avaliado pela aplicação de boas práticas e pela qualidade da documentação e do código.
+📤 Entrega
 
-Entrega
-A solução deve ser submetida através dos seguintes passos:
-
-Criação de um repositório dedicado no GitHub ou GitLab.
-
-Estruturação clara das pastas no repositório para facilitar a identificação dos componentes.
-
-Envio do link do repositório, juntamente com o perfil atualizado do LinkedIn e currículo, à equipe de recrutamento.
-
-É altamente recomendável incluir um arquivo README.md detalhado com uma descrição da aplicação e instruções claras para sua execução.
-
-Escopo
-O objetivo principal é segmentar a aplicação monolítica em Front-end, Back-end e Banco de Dados e criar a infraestrutura para hospedagem em um provedor de nuvem GCP.
-
-Requisitos de Infraestrutura e Tecnologia
-Provedor de Nuvem: GCP. (A terminologia usada no escopo a seguir refere-se à AWS, favor ser adaptada ao provedor GCP).
-
-Infraestrutura como Código (IaC): Utilização de Terraform e/ou ansible para provisionar os recursos.
-
-Ambiente de Execução: Os serviços devem rodar em servidores Linux e containers Kubernetes.
-
-Rede: Configuração de uma VPC com três subnets privadas (sem acesso direto da rede externa) e três subnets públicas (expostas com as devidas configurações de segurança).
-
-Alta Disponibilidade e Observabilidade: Promover alta disponibilidade e providenciar uma observabilidade mínima para as aplicações.
-
-Tarefas de Implementação
-O candidato deve segmentar o monolito recebido, que possui as camadas de Front-end, Back-end e Banco de Dados.
-
-Infraestrutura (IaC)
-Provisionar VPC e Subnets.
-
-Configurar Roles/Policies e Security Groups (SG).
-
-Criar um banco de dados relacional.
-
-Provisionar o cluster Kubernetes.
-
-Back-end e Front-end (Contêineres e Orquestração)
-A partir dos códigos-fonte fornecidos nas pastas backend e frontend :
-
-Construir as imagens Docker das aplicações.
-
-Criar os manifestos de recursos Kubernetes (Deployments, Services, Ingresses, ConfigMaps, etc.) para ambas as aplicações.
-
-Desenvolver um script que realize o deploy da aplicação em um único comando no cluster Kubernetes.
-
-Conexão e Configuração:
-
-O Back-end deve ser configurado para se conectar ao banco de dados provisionado (ajustando o application.yml).
-
-Deve-se criar um usuário no banco de dados para acesso.
-
-O Front-end deve ter seu apontamento para a API do Back-end configurado (environment.ts).
-
-As aplicações devem ser acessíveis via uma URL específica (DNS/Ingress).
-
-Garantir que apenas as portas estritamente necessárias sejam liberadas nos Security Groups.
-
-(Detalhes técnicos adicionais sobre a configuração do banco de dados, variáveis de ambiente e o fluxo de login e home screen da aplicação original foram mantidos, pois são essenciais para a execução do desafio.)
-
-Diferenciais (Extras)
-Utilização da ferramenta HELM.
-
-Divisão dos recursos por namespaces no Kubernetes.
-
-Implementação de Health Checks na aplicação.
-
-Realização do deploy via Pipeline CI/CD.
-
-Configuração de observabilidade mínima da infraestrutura com ferramenta de sua escolha.
-
-Alternativa Teórica
-Caso não haja disponibilidade para a codificação completa do desafio, o candidato pode optar pela Alternativa Teórica.
-
-Estudo de Caso e Desenho de Solução
 O candidato deve:
 
-Escolher um segmento bancário para modernização (e.g., pagamentos, cobrança, crédito, seguros).
+Criar um repositório dedicado no GitHub ou GitLab.
 
-Contextualizar o segmento (conceito, regra de negócio e um desafio a ser resolvido).
+Organizar as pastas por módulos (infra, backend, frontend).
 
-Construir um "Desenho de Solução" para a modernização, utilizando ferramentas como Diagrams.net ou Excalidraw.
+Enviar para o time de recrutamento:
 
-Justificar o uso dos serviços de nuvem ( GCP).
+Link do repositório
 
-Aplicar Monitoramento e Observabilidade Mínima (métricas, logs, traces, alertas, incidentes), detalhando as ferramentas utilizadas.
+Perfil atualizado do LinkedIn
 
+Currículo
 
-Considerações Finais
-Todos os recursos devem ser criados utilizando os créditos gratuitos do provedor de nuvem.
+Incluir um README.md detalhado com:
 
-É mandatório destruir todos os recursos após a conclusão e testes do desafio, a fim de evitar cobranças indevidas ou esgotamento dos créditos.
+Arquitetura
+
+Como executar a solução
+
+Comandos de deploy
+
+Fluxo geral de funcionamento
+
+📚 Escopo do Projeto
+
+O objetivo é segmentar o monolito e criar a infraestrutura em GCP para os componentes:
+
+Front-end
+
+Back-end
+
+Banco de Dados
+
+☁️ Requisitos de Infraestrutura e Tecnologia
+Provedor de Nuvem
+
+Google Cloud Platform (GCP)
+(Os termos originais de AWS devem ser adaptados para GCP.)
+
+Infraestrutura como Código
+
+Terraform e/ou Ansible.
+
+Ambiente
+
+Kubernetes (GKE)
+
+Docker containers
+
+Servidores Linux (quando necessário)
+
+Rede
+
+Criar:
+
+1 VPC
+
+3 subnets privadas
+
+3 subnets públicas
+
+Alta Disponibilidade & Observabilidade
+
+Aplicações resilientes
+
+Monitoramento básico (métricas / logs / health checks)
+
+🛠️ Tarefas de Implementação
+🔧 1. Infraestrutura (IaC)
+
+O candidato deve provisionar:
+
+VPC e subnets (privadas e públicas)
+
+Firewalls / Security Groups (GCP: Firewall Rules)
+
+Roles e policies (IAM)
+
+Banco de dados relacional (Cloud SQL – PostgreSQL ou MySQL)
+
+Cluster Kubernetes (GKE)
+
+DNS / Load Balancer (se necessário)
+
+🧩 2. Back-end & Front-end (Containers e Orquestração)
+
+A partir das pastas backend e frontend, executar:
+
+Contêineres
+
+Utilizar o Dockerfiles do repositorio
+
+Publicar imagens (pode ser Container Registry ou Artifact Registry do GCP)
+
+Kubernetes
+
+Criar manifestos para:
+
+Deployments
+
+Services
+
+Ingress
+
+ConfigMaps / Secrets
+
+Horizontal Pod Autoscaler (opcional)
+
+Deploy Automatizado
+
+Criar um script único que aplique todos os manifests no cluster.
+
+🔗 3. Conexões e Configurações
+Back-end
+
+Configurar acesso ao banco via application.yml
+
+Criar um usuário dedicado no banco
+
+Variáveis de ambiente via ConfigMap/Secret
+
+Front-end
+
+Ajustar environment.ts apontando o endpoint da API
+
+Exposição
+
+Aplicações devem ser acessíveis via URL usando DNS + Ingress
+
+Segurança
+
+Liberar apenas as portas estritamente necessárias
+
+⭐ Diferenciais (Extras)
+
+Uso de Helm Charts
+
+Separação por namespaces
+
+Health checks configurados
+
+Pipeline CI/CD automatizado
+
+Observabilidade mínima (Prometheus, Grafana, Stackdriver etc.)
+
+🧠 Alternativa Teórica (Opcional)
+
+Caso não seja possível realizar o desafio completo, o candidato pode:
+
+1️⃣ Escolher um segmento bancário
+
+Ex.: pagamentos, crédito, cobrança, seguros.
+
+2️⃣ Descrever o contexto
+
+Conceito
+
+Regras de negócio
+
+Problema a ser resolvido
+
+3️⃣ Criar um desenho da solução
+
+Ferramentas recomendadas:
+
+Diagrams.net
+
+Excalidraw
+
+4️⃣ Justificar o uso dos serviços da GCP
+
+Infraestrutura, banco, computação, segurança, etc.
+
+5️⃣ Demonstrar observabilidade
+
+Métricas
+
+Logs
+
+Traces
+
+Alertas
+
+Incidentes
+
+⚠️ Considerações Finais
+
+Todos os recursos devem ser criados usando créditos gratuitos da GCP.
+
+É obrigatório destruir os recursos ao final para evitar cobranças.
