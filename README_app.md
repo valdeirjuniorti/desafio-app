@@ -22,7 +22,6 @@ Antes de rodar o projeto, tenha instalado:
 
 ```txt
 desafios-app/
-  docker-compose.yml
   backend/
     Dockerfile
     package.json
