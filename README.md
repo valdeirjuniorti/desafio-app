@@ -1,242 +1,121 @@
-📘 Desafio Técnico — SRE/DEVOPS
+# Desafio Técnico — Site Reliability Engineer (SRE) / DEVOPS 
 
-Avaliação técnica para a vaga de Site Reliability Engineer (SRE).
+## 1. Visão Geral
+Este documento descreve o escopo, requisitos e diretrizes do Desafio Técnico para a posição de Site Reliability Engineer (SRE) /DEVOPS .  
+O objetivo principal é avaliar competências técnicas relacionadas a infraestrutura, automação, arquitetura cloud e observabilidade, dentro de um padrão corporativo e formal.
 
-🎯 Objetivo da Avaliação
+CRIAR UM NOVO REPOSSITORIO COM RESULTADO PARA AVALIACAO EX: DESAFIO-APP-RESULTADO
 
-Este desafio tem como finalidade avaliar:
+---
 
-Habilidades Técnicas
+## 2. Objetivo da Avaliação
+A avaliação contempla análise das seguintes capacidades:
 
-Infraestrutura como Código (IaC): Provisionamento e gerenciamento automatizado de recursos.
+### 2.1 Infraestrutura como Código (IaC)
+- Provisionamento automatizado de recursos.
+- Padronização de ambientes e reutilização de módulos.
 
-Contêineres e Orquestração: Docker e Kubernetes (criação, deploy, distribuição e manutenção).
+### 2.2 Contêineres e Orquestração
+- Construção e execução de contêineres Docker.
+- Deploy, gerenciamento e escalabilidade via Kubernetes.
 
-Arquitetura Cloud e Redes: GCP (adaptar termos originalmente descritos em AWS), VPC, subnets, segurança.
+### 2.3 Arquitetura Cloud e Redes
+- Modelagem de redes na GCP.
+- Implementação de VPCs, sub-redes, regras de firewall e controles de segurança.
 
-DevOps & Boas Práticas: Código limpo, seguro, resiliente, com alta disponibilidade.
+### 2.4 Práticas de DevOps
+- Automação de processos.
+- Código limpo e seguro.
+- Adoção de boas práticas de CI/CD.
 
-Observabilidade: Monitoramento, métricas, logs, rastreamento e saúde da aplicação.
+### 2.5 Observabilidade
+- Monitoramento.
+- Coleta de métricas.
+- Centralização de logs.
 
-📝 Descrição Geral do Desafio
+---
 
-A empresa Domo (Banco Mercantil) está migrando sua infraestrutura on-premise para GCP.
-O desafio consiste em modernizar uma aplicação monolítica, quebrando-a em microsserviços (Front-end, Back-end e Banco de Dados), e provisionar toda a infraestrutura na nuvem usando boas práticas de Engenharia de Confiabilidade.
+## 3. Contexto do Desafio
+A empresa está conduzindo a migração de sua infraestrutura on-premises para a Google Cloud Platform (GCP).  
+O candidato deverá modernizar uma aplicação monolítica fornecida, segmentando-a e implementando uma arquitetura que suporte microsserviços, escalabilidade e boas práticas de disponibilidade.
 
-O sucesso da entrega depende de:
+---
 
-Qualidade técnica do código,
+## 4. Escopo do Desafio
+O desafio compreende três componentes principais:
 
-Arquitetura,
+- **Infraestrutura**
+- **Back-end**
+- **Front-end**
 
-Segurança,
+O resultado será avaliado com base em organização, segurança, padronização, arquitetura e documentação.
 
-Alta disponibilidade,
+---
 
-Observabilidade,
+## 5. Entregáveis
+O candidato deverá:
 
-Clareza da documentação.
+1. Criar um repositório dedicado no GitHub ou GitLab.  
+2. Estruturar os diretórios de maneira organizada (infra/, backend/, frontend/).  
+3. Submeter:
+   - Link do repositório
+   - Perfil do LinkedIn
+   - Currículo atualizado  
+4. Incluir documentação completa para execução do projeto.
 
-📦 Componentes Principais
+---
 
-O desafio está dividido em 3 partes:
+## 6. Requisitos Técnicos
 
-Infraestrutura (IaC)
+### 6.1 Infraestrutura
+- Provisionar VPC e sub-redes públicas e privadas.  
+- Configurar IAM, Firewall Rules e políticas aplicáveis.  
+- Criar banco de dados relacional em Cloud SQL.  
+- Provisionar um cluster Kubernetes (GKE).  
 
-Back-end
+### 6.2 Back-end e Front-end
+- Criar imagens Docker baseadas no código fornecido.  
+- Definir manifestos Kubernetes (Deployments, Services, ConfigMaps, Secrets, Ingress).  
+- Garantir comunicação entre serviços.  
+- Configurar variáveis de ambiente e apontamentos necessários.
 
-Front-end
+### 6.3 Automação
+- Criar script único de deploy para o cluster.  
 
-📤 Entrega
+### 6.4 Segurança
+- Respeitar o princípio de menor privilégio.  
+- Liberar somente portas essenciais.  
 
-O candidato deve:
+---
 
-Criar um repositório dedicado no GitHub ou GitLab.
+## 7. Diferenciais Técnicos
+A implementação pode ser enriquecida com:
 
-Organizar as pastas por módulos (infra, backend, frontend).
+- Uso de Helm Chart.  
+- Estruturação por namespaces.  
+- Implementação de health checks.  
+- Pipelines CI/CD funcionais.  
+- Observabilidade via Stackdriver, Prometheus ou ferramentas similares.
 
-Enviar para o time de recrutamento:
+---
 
-Link do repositório
+## 8. Alternativa Teórica (Opcional)
+Caso não haja disponibilidade para implementação prática:
 
-Perfil atualizado do LinkedIn
+1. Escolher um segmento bancário (pagamentos, crédito, seguros etc.).  
+2. Definir contexto, regras de negócio e problema.  
+3. Criar desenho arquitetural da solução.  
+4. Justificar escolha dos serviços GCP utilizados.  
+5. Descrever observabilidade mínima necessária.
 
-Currículo
+---
 
-Incluir um README.md detalhado com:
+## 9. Considerações Finais
+- Os recursos devem ser provisionados com créditos gratuitos da GCP.  
+- Todos os recursos devem ser removidos ao final dos testes para evitar cobranças indevidas.  
+- O candidato deve prezar pela qualidade, clareza e padronização da entrega.
 
-Arquitetura
+---
 
-Como executar a solução
-
-Comandos de deploy
-
-Fluxo geral de funcionamento
-
-📚 Escopo do Projeto
-
-O objetivo é segmentar o monolito e criar a infraestrutura em GCP para os componentes:
-
-Front-end
-
-Back-end
-
-Banco de Dados
-
-☁️ Requisitos de Infraestrutura e Tecnologia
-Provedor de Nuvem
-
-Google Cloud Platform (GCP)
-(Os termos originais de AWS devem ser adaptados para GCP.)
-
-Infraestrutura como Código
-
-Terraform e/ou Ansible.
-
-Ambiente
-
-Kubernetes (GKE)
-
-Docker containers
-
-Servidores Linux (quando necessário)
-
-Rede
-
-Criar:
-
-1 VPC
-
-3 subnets privadas
-
-3 subnets públicas
-
-Alta Disponibilidade & Observabilidade
-
-Aplicações resilientes
-
-Monitoramento básico (métricas / logs / health checks)
-
-🛠️ Tarefas de Implementação
-🔧 1. Infraestrutura (IaC)
-
-O candidato deve provisionar:
-
-VPC e subnets (privadas e públicas)
-
-Firewalls / Security Groups (GCP: Firewall Rules)
-
-Roles e policies (IAM)
-
-Banco de dados relacional (Cloud SQL – PostgreSQL ou MySQL)
-
-Cluster Kubernetes (GKE)
-
-DNS / Load Balancer (se necessário)
-
-🧩 2. Back-end & Front-end (Containers e Orquestração)
-
-A partir das pastas backend e frontend, executar:
-
-Contêineres
-
-Utilizar o Dockerfiles do repositorio
-
-Publicar imagens (pode ser Container Registry ou Artifact Registry do GCP)
-
-Kubernetes
-
-Criar manifestos para:
-
-Deployments
-
-Services
-
-Ingress
-
-ConfigMaps / Secrets
-
-Horizontal Pod Autoscaler (opcional)
-
-Deploy Automatizado
-
-Criar um script único que aplique todos os manifests no cluster.
-
-🔗 3. Conexões e Configurações
-Back-end
-
-Configurar acesso ao banco via application.yml
-
-Criar um usuário dedicado no banco
-
-Variáveis de ambiente via ConfigMap/Secret
-
-Front-end
-
-Ajustar environment.ts apontando o endpoint da API
-
-Exposição
-
-Aplicações devem ser acessíveis via URL usando DNS + Ingress
-
-Segurança
-
-Liberar apenas as portas estritamente necessárias
-
-⭐ Diferenciais (Extras)
-
-Uso de Helm Charts
-
-Separação por namespaces
-
-Health checks configurados
-
-Pipeline CI/CD automatizado
-
-Observabilidade mínima (Prometheus, Grafana, Stackdriver etc.)
-
-🧠 Alternativa Teórica (Opcional)
-
-Caso não seja possível realizar o desafio completo, o candidato pode:
-
-1️⃣ Escolher um segmento bancário
-
-Ex.: pagamentos, crédito, cobrança, seguros.
-
-2️⃣ Descrever o contexto
-
-Conceito
-
-Regras de negócio
-
-Problema a ser resolvido
-
-3️⃣ Criar um desenho da solução
-
-Ferramentas recomendadas:
-
-Diagrams.net
-
-Excalidraw
-
-4️⃣ Justificar o uso dos serviços da GCP
-
-Infraestrutura, banco, computação, segurança, etc.
-
-5️⃣ Demonstrar observabilidade
-
-Métricas
-
-Logs
-
-Traces
-
-Alertas
-
-Incidentes
-
-⚠️ Considerações Finais
-
-Todos os recursos devem ser criados usando créditos gratuitos da GCP.
-
-É obrigatório destruir os recursos ao final para evitar cobranças.
+## 10. Contato da Equipe
+Em caso de dúvidas, entre em contato com a equipe responsável pelo processo seletivo.
