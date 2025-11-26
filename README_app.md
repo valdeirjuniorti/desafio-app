@@ -12,9 +12,9 @@ Aplicação full-stack de **Desafios Pessoais** (hábitos, estudos, treinos etc.
 
 Antes de rodar o projeto, tenha instalado:
 
-- **Docker** (20+)
-- **Docker Compose** (geralmente já vem junto com o Docker Desktop)
-- Opcional: **Node.js 18+** e **npm**, caso queira rodar frontend/backend fora de containers
+- **K8S** 
+- **GKE** 
+- Opcional: **Node.js 18+** e **npm**, caso queira rodar frontend/backend fora de containers para teste local
 
 ---
 
