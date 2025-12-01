@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: desafio-app
+  name: frontend
   labels:
-    name: desafio-app
-    environment: production
+    name: frontend
+    environment: dev
 

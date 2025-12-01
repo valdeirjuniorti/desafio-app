@@ -16,7 +16,7 @@ Imagem base segura para aplicações Node.js backend.
 FROM seu-registry/backend-base:latest
 
 COPY --chown=nodejs:nodejs package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci --only=dev && npm cache clean --force
 
 COPY --chown=nodejs:nodejs . .
 

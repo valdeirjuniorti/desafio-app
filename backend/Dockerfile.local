@@ -8,10 +8,10 @@ RUN addgroup -g 1001 -S nodejs && \
 FROM base AS dependencies
 
 COPY package*.json ./
-RUN npm ci --only=production && \
+RUN npm ci --only=dev && \
     npm cache clean --force
 
-FROM base AS production
+FROM base AS dev
 
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY --chown=nodejs:nodejs src ./src
@@ -20,7 +20,7 @@ RUN chown -R nodejs:nodejs /app
 
 USER nodejs
 
-ENV NODE_ENV=production
+ENV NODE_ENV=dev
 ENV PORT=4000
 
 EXPOSE 4000

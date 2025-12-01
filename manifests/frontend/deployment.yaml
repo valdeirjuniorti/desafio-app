@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: desafio-app
+  namespace: frontend
   labels:
     app: frontend
     version: v1

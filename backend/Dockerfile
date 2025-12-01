@@ -1,7 +1,7 @@
 FROM seu-registry/backend-base:20-alpine3.19
 
 COPY --chown=nodejs:nodejs package*.json ./
-RUN npm ci --only=production && \
+RUN npm ci --only=dev && \
     npm cache clean --force
 
 COPY --chown=nodejs:nodejs src ./src

@@ -1,8 +1,9 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: backend
+  name: observability
   labels:
-    name: backend
+    name: observability
     environment: dev
+
 

@@ -2,9 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: backend-config
-  namespace: desafio-app
+  namespace: backend
 data:
   PORT: "4000"
-  NODE_ENV: "production"
+  NODE_ENV: "dev"
   LOG_LEVEL: "info"
 
