@@ -1,4 +1,4 @@
-FROM seu-registry/frontend-build-base:20-alpine3.19 AS build
+FROM frontend-build-base:20-alpine3.19 AS build
 
 COPY --chown=nodejs:nodejs package*.json ./
 RUN npm ci && \
