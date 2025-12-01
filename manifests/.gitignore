@@ -1,0 +1,5 @@
+*.bak
+*.tmp
+*secret*.yaml
+!*secret*.yaml.example
+
