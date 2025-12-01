@@ -5,4 +5,5 @@ metadata:
   labels:
     name: backend
     environment: dev
+    network-policy: enabled
 
