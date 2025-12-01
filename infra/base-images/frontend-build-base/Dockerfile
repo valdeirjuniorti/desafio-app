@@ -1,0 +1,23 @@
+FROM node:20-alpine3.19
+
+RUN apk add --no-cache --update \
+    dumb-init \
+    && rm -rf /var/cache/apk/*
+
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 -G nodejs
+
+RUN mkdir -p /app && \
+    chown -R nodejs:nodejs /app
+
+WORKDIR /app
+
+USER nodejs
+
+ENV NODE_ENV=dev
+ENV NPM_CONFIG_LOGLEVEL=warn
+ENV NPM_CONFIG_AUDIT=false
+ENV NPM_CONFIG_FUND=false
+ENV NPM_CONFIG_UPDATE_NOTIFIER=false
+
+ENTRYPOINT ["dumb-init", "--"]
